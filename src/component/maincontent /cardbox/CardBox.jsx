@@ -27,7 +27,7 @@ function CardBox(props) {
       id={props.id}
       onDrop={drop}
       onDragOver={dragOver}
-      className=" ml-6 mt-6 rounded-lg flex flex-col h-96 mb-6 w-1/5 bg-gray-200"
+      className=" ml-6 mt-6 rounded-lg flex flex-col h-96 mb-6 w-1/5 bg-gray-200 hover:scale-105"
     >
 
     {props.children}
@@ -54,7 +54,7 @@ export function CardBoxB() {
   return (
     <div
       id="card-box"
-      className=" ml-6 mt-6 rounded-lg flex flex-col h-96 mb-6 w-1/5 bg-gray-200"
+      className=" ml-6 mt-6 rounded-lg flex flex-col h-96 mb-6 w-1/5 bg-gray-200 hover:scale-105"
     >
       <div className="flex flex-row mt-3">
         <p className="text-gray-700 text-sm font-medium ml-4">Qualified</p>
@@ -74,7 +74,7 @@ export function CardBoxC() {
   return (
     <div
       id="card-box"
-      className=" ml-6 mt-6 rounded-lg flex flex-col h-96 mb-6 w-1/5 bg-gray-200"
+      className=" ml-6 mt-6 rounded-lg flex flex-col h-96 mb-6 w-1/5 bg-gray-200 hover:scale-105"
     >
       <div className="flex flex-row mt-3">
         <p className="text-gray-700 text-sm font-medium ml-4">Interview</p>
@@ -94,7 +94,7 @@ export function CardBoxD() {
   return (
     <div
       id="card-box"
-      className=" ml-6 mt-6 rounded-lg flex flex-col h-96 mb-6 w-1/5 bg-gray-200"
+      className=" ml-6 mt-6 rounded-lg flex flex-col h-96 mb-6 w-1/5 bg-gray-200 hover:scale-105"
     >
       <div className="flex flex-row mt-3">
         <p className="text-gray-700 text-sm font-medium ml-4">Shortlisted</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import { MdAddCircleOutline } from "react-icons/md";
 import { MyComponent } from "../../const/index";
+import { sidebarList } from "../../component/data/data";
 
 function sidebar() {
   return (
@@ -60,46 +61,21 @@ function sidebar() {
             </div>
           </form>{" "}
           <div className="">
-            <button
-              className="bg-red-400 text-orange-50  p-3 rounded-md m-3 w-56"
-              type="button"
-            >
-              <div className="text-xl"> Front end developer</div>
-              <div className="text-sm"> (Full time) </div>
-              <div className="text-base"> columbo sri-lanka </div>
-            </button>
-          </div>
-          <div className="">
-            <button
-              className="bg-red-400 text-orange-50  p-3 rounded-md m-3 w-56"
-              type="button"
-            >
-              <div className="text-xl"> QA Engineer</div>
-              <div className="text-sm"> (Internship) </div>
-              <div className="text-base"> columbo sri-lanka </div>
-            </button>
-          </div>
-          <div className="">
-            <button
-              className="bg-red-400 text-orange-50  p-3 rounded-md m-3 w-56"
-              type="button"
-            >
-              <div className="text-xl"> UI Designer</div>
-              <div className="text-sm"> (Full time) </div>
-              <div className="text-base"> columbo sri-lanka </div>
-            </button>
-          </div>
-
-          <div className="">
-            <button
-              className="bg-red-400 text-orange-50  p-3 rounded-md m-3 w-56"
-              type="button"
-            >
-              <div className="text-xl"> UI Designer</div>
-              <div className="text-sm"> (Full time) </div>
-              <div className="text-base"> columbo sri-lanka </div>
-            </button>
-          </div>
+            {sidebarList.map((data, index) => {
+              return (
+                <>
+                  <button
+                    className="bg-red-400 text-orange-50  p-3 rounded-md m-3 w-56"
+                    type="button"
+                  >
+                    <div className="text-xl"> {data.Designation}</div>
+                    <div className="text-sm"> {data.JobType}</div>
+                    <div className="text-base"> {data.Location} </div>
+                  </button>
+                </>
+              );
+            })}
+          </div>{" "}
         </div>
       </div>
     </>

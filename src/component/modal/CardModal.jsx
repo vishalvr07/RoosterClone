@@ -16,7 +16,7 @@ const customStyles = {
 function CardModal(props) {
 
 // const[showmodal , setShowmodal] = useState();
-
+// 
 // setShowmodal(props.show);
 
 // console.log(showmodal);

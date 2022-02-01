@@ -39,7 +39,7 @@ function Card(props) {
       draggable={true}
       onDragStart={dragStart}
       onDragOver={dragOver}
-      className="bg-gray-300 ml-2 mr-2 mt-1 mb-1 rounded-lg h-20 hover:scale-105"
+      className="bg-gray-300 ml-2 mr-2 mt-1 mb-1 rounded-lg h-20 hover:scale-105 cursor-pointer hover:bg-violet-400"
     >
       
 
@@ -47,26 +47,26 @@ function Card(props) {
         Ryan Perare <p className="ml-20 "></p>{" "}
       </div>
       <div className="text-xs ml-2 text-gray-700  ">06 Days Ago</div>
-      <div className="flex flex-row ml-2 ">
+      <div className="flex flex-row ml-2 mt-2 ">
         <div className="text-xs text-gray-700 ">
           {" "}
           <div className="flex flex-row pt-1 pb-1 pr-1">
             {" "}
-            <BiMessageAltDetail size={15} color="#696969" /> &nbsp; 03{" "}
+            <BiMessageAltDetail size={15} color="#696969" /> &nbsp; <p> 02</p>{" "}
           </div>{" "}
         </div>
         <div className="text-xs text-gray-700 ">
           {" "}
           <div className="flex flex-row p-1 pl-2">
             {" "}
-            <AiOutlinePaperClip size={15} color="#696969" /> &nbsp; 02
+            <AiOutlinePaperClip size={15} color="#696969" /> &nbsp; <p> 02</p>
           </div>{" "}
         </div>
         <div className="text-xs text-gray-700 ml-10 ">
           {" "}
           <div className="flex flex-row p-1">
             {" "}
-            <AiOutlineHeart size={15} color="#696969" /> &nbsp; 03{" "}
+            <AiOutlineHeart size={15} color="#696969" /> &nbsp; <p> 02</p>{" "}
           </div>{" "}
         </div>
       </div>
