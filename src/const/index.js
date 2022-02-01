@@ -1,6 +1,6 @@
 import Select from "react-select";
 
-
+//dummy data , ignore that .
 export const options = [
   { value: "chocolate", label: "Chocolate" },
   { value: "strawberry", label: "Strawberry" },
