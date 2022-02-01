@@ -1,3 +1,30 @@
+so dependencies 
+
+1 router for sure 
+2 tailwind css 
+
+to do 
+see UI and make components . 
+the Dashboard will look like something like this ';
+1 their is going to be a header on the top and it will be a common component 
+2 sidebar - sidebar consists of A form and A routing link . 
+
+all configuration done 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
