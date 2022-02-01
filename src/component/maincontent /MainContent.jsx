@@ -54,15 +54,13 @@ function MainContent() {
               <hr />{" "}
             </div>
             
-            <div className='flex flex-row    '>
+            <div className='flex flex-row  '>
            <CardBox id="card_id" > 
            <Card />
            </CardBox>
 
-           <CardBox id="card_id" > 
-           <Card />
-           </CardBox>
-           
+         
+        
            <CardBoxB />
            <CardBoxC />
            <CardBoxD />

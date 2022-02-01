@@ -8,6 +8,7 @@ const customStyles = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
+    padding:'0px',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
   },
@@ -24,10 +25,12 @@ function CardModal(props) {
 
 
   <Modal isOpen={props.show} style={customStyles}  > 
+  <div className=' bg-red-400 p-8'> 
+  <p className='ml-64 -mt-6'>X</p>
   <p>  Hi modal here good to meet you . 
 </p>
-<button  className='bg-red-400 p-1 rounded m-1 text-sm'>Close</button>
-
+<button  className='bg-gray-400 p-1 rounded m-1 text-sm'>Close</button>
+</div>
   </Modal>
 
 

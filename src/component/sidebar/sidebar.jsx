@@ -65,7 +65,7 @@ function sidebar() {
               return (
                 <>
                   <button
-                    className="bg-red-400 text-orange-50  p-3 rounded-md m-3 w-56"
+                    className="bg-red-400 text-orange-50  p-3 rounded-md m-3 w-56 hover:scale-105"
                     type="button"
                   >
                     <div className="text-xl"> {data.Designation}</div>
