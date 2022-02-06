@@ -1,7 +1,9 @@
+const tech = "Front End"
+
 export const sidebarList = [
   {
     id: "1",
-    Designation: "Front End Developer",
+    Designation: tech,
     JobType: "(Full time)",
     Location: "columbo Srilanka",
   },

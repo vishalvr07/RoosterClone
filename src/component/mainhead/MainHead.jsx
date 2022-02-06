@@ -5,7 +5,7 @@ import { MdModeEdit } from "react-icons/md";
 import { FaLocationArrow } from "react-icons/fa";
 
 
-function MainHead() {
+function MainHead(props) {
   return (
 
 <div className="w-3/5">
