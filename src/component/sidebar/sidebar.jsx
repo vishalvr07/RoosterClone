@@ -16,8 +16,8 @@ function sidebar() {
   const [users, setUsers] = useState([
     {
       id: "1",
-      Designation: "UI/UX Developer",
-      JobType: "(Full time)",
+      Designation: "Back End Developer",
+      JobType: "(Part time)",
       Location: "columbo Srilanka",
     },
     {
@@ -304,6 +304,22 @@ setUsers(results);
           <div className="">
           {//commnet map
           }
+          <button 
+        // onClick={changeUI}
+          className="bg-gray-200  p-3 rounded-md m-3 -mr-24 w-64 hover:scale-105"
+          type="button"
+        >
+        <div className="flex ">
+<div className="flex-row">
+        <button type="button" value="Rotated text" className=" rotate-90 rounded w-20 mt-3 -mr-3 -ml-4 bg-green-400  text-orange-50" id="rotate" >
+        Active </button> </div>
+         <div className="flex-row text-gray-700" >
+          <div className="text-xl"> UI/UX Designer</div>
+          <div className="text-sm"> (full Time)</div>
+          <div className="text-base"> Gale  Srilanka</div> </div>
+          </div>
+        </button>
+
 
           {users.map((data, index) => {
     return (

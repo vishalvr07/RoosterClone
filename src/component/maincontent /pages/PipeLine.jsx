@@ -1,19 +1,41 @@
-import { Card } from "@mui/material";
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import { MdAlignVerticalTop } from "react-icons/md";
 import { RiBarChartHorizontalFill } from "react-icons/ri";
 //import CardBox, { CardBoxB, CardBoxC, CardBoxD } from "../CardBox/cardbox/CardBox";
 import Modal from "react-modal";
 import CardBox, { CardBoxB, CardBoxC, CardBoxD } from "../cardbox/CardBox";
+import Card from "../cards/Card";
 
 function PipeLine() {
   const [show, setShow] = useState(false);
+  const [name, setName] = useState("");
+  const [users, setUsers] = useState([
+    {
+      id: "4",
+      Name: "Kovind",
+    },
+  ]);
+
+  useEffect(() => {
+    const jobeys = JSON.parse(localStorage.getItem("jobs"));
+    setUsers(jobeys);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("jobs", JSON.stringify(users));
+  }, [users]);
 
   const handleClick = () => {
     setShow(true);
   };
   const hide = () => {
     setShow(false);
+  };
+
+  const addJob = (candidate) => {
+    const results = [...users, candidate];
+    setUsers(results);
   };
 
   const AddCandidatesModal = () => {
@@ -29,6 +51,16 @@ function PipeLine() {
         borderRadius: "20px",
       },
     };
+   // console.log(name);
+    const handleSubmit = () => {
+      const FormData = {
+        id: "1",
+        Name: name,
+      };
+
+      addJob(FormData);
+    };
+
     return (
       <>
         <Modal isOpen={show} style={customStyles}>
@@ -49,8 +81,8 @@ function PipeLine() {
                 type="text"
                 className="rounded p-1 m-2 w-11/12 "
                 placeholder="Candidate Name "
-                //value={jobProfile}
-                //onInput={(e) => setJobProfile(e.target.value)}
+                value={name}
+                onInput={(e) => setName(e.target.value)}
               />
               <br></br>
               <input
@@ -127,7 +159,7 @@ function PipeLine() {
               <br />
               <button
                 type="submit"
-                //onClick={handleSubmit}
+                onClick={handleSubmit}
                 className="bg-gray-400 hover:bg-gray-600 p-1 rounded m-1 ml-36 mt-4"
               >
                 {" "}
@@ -184,10 +216,48 @@ function PipeLine() {
         </div>
 
         <div className="flex flex-row  ">
-          <CardBox id="card_id">
-            <Card />
-          </CardBox>
+          {/* <CardBox /> 
+          cardbox code start form here 
+          */}
+          
+          <div
+      //id={props.id}
+      //onDrop={drop}
+      //onDragOver={dragOver}
+      className=" ml-6 mt-6 rounded-lg flex flex-col  mb-6 w-1/5 bg-gray-200 hover:scale-105 hover:bg-gray-100"
+    >
+     
 
+      <div className="flex flex-row mt-3">
+        <p className="text-gray-700 font-medium text-sm ml-4">Screening</p>
+        <p className="text-gray-700 text-sm ml-20">06</p>
+      </div>
+      <div className="border-b-2 border-gray-400 mt-2 mb-2 ml-4 mr-4">
+        <hr />
+      </div>
+
+      {users.map((data, index) => {
+        return (
+          <>
+            <Card name={data.Name} />
+          </>
+        );
+      })}
+
+      
+
+      {/*
+      carbox code ends at here 
+      --------------------------------------------------------------------------------------------------- 
+      <Card />
+      <Card /> 
+      <Card />
+      <Card />
+
+      <Card /> */}
+    </div>
+
+  
           <CardBoxB />
           <CardBoxC />
           <CardBoxD />
