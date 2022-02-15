@@ -3,7 +3,7 @@ import Header from "./component/header/header";
 import Sidebar from "./component/sidebar/sidebar";
 import MainHead from "./component/mainhead/MainHead";
 import HiringTeam from "./component/hiringTeam/HiringTeam";
-import MainContent from "./component/maincontent /MainContent";
+import MainContent from "./component/maincontent/MainContent";
 
 
 function App() {
